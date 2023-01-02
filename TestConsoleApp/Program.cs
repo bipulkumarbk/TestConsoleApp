@@ -26,6 +26,14 @@ namespace TestConsoleApp
         }
 
     }
+
+    class Testseadled : NotsealedClass
+    {
+        public override void NotsealedMethod()
+        {
+            base.NotsealedMethod();
+        }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -35,7 +43,14 @@ namespace TestConsoleApp
             test.TestMed();
             test.TestAbstMed();
 
-                 
+            TestSealdClass Stest = new TestSealdClass();
+
+            Stest.SealedMethod();
+
+
+            NotsealedClass testNS = new NotsealedClass();
+
+            testNS.NotsealedMethod();
         }
     }
 }
