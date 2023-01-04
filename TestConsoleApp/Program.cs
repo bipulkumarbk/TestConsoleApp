@@ -6,18 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestConsoleApp
 {
-    abstract class TestAbst
-    {
-        public void TestMed()
-        {
-            Console.WriteLine("Hello World");
-            Console.ReadLine();
-        }
-        public abstract void TestAbstMed();
-       
-    }
-
-    class ImplementTest:TestAbst
+   
+    class ImplementTest: TestAbstract
     {
         public override void TestAbstMed()
         {
@@ -40,7 +30,7 @@ namespace TestConsoleApp
         {
             ImplementTest test = new ImplementTest();
 
-            test.TestMed();
+            test.HelloMethod();
             test.TestAbstMed();
 
             TestSealdClass Stest = new TestSealdClass();
