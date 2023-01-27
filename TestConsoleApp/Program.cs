@@ -24,8 +24,27 @@ namespace TestConsoleApp
             base.NotsealedMethod();
         }
     }
+
+
     class Program
     {
+        static Program()
+        {
+            Console.WriteLine("I am static constructor");
+            Console.ReadLine();
+        }
+        //Program()
+        //{
+        //    Console.WriteLine("I am Program constructor");
+        //    Console.ReadLine();
+        //}
+
+        void Add()
+        {
+            Console.WriteLine("I am Adding number");
+            Console.ReadLine();
+        }
+
         static void Main(string[] args)
         {
             ImplementTest test = new ImplementTest();
@@ -41,6 +60,17 @@ namespace TestConsoleApp
             NotsealedClass testNS = new NotsealedClass();
 
             testNS.NotsealedMethod();
+
+            //TestSealdClass Teststatic = new TestStaticClass();
+
+            Program pro = new Program();
+
+            pro.Add();
+
+            Geeks geeks = new Geeks();
+
+            TestSatic testSatic = new TestSatic();
+
         }
     }
 }
